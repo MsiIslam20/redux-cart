@@ -31,7 +31,8 @@ const products = [
     }
 ];
 
-const Product = () => {
+const Product = ({props}) => {
+    console.log(props);
     return (
         <>
             {
