@@ -3,36 +3,8 @@ import { connect } from 'react-redux';
 import { addToCart } from '../../Redux/actions/cartActions';
 import SingleProduct from './SingleProduct';
 
-const products = [
-    {
-        name: 'Apple Macbook',
-        price: 1200,
-        id: 1
-    },
-    {
-        name: 'Asus Laptop',
-        price: 890,
-        id: 2
-    },
-    {
-        name: 'Hp Brand new laptop',
-        price: 1799,
-        id: 3
-    },
-    {
-        name: 'Tosiba Newbook',
-        price: 295,
-        id: 4
-    },
-    {
-        name: 'Dell inspiration',
-        price: 699,
-        id: 5
-    }
-];
-
-const Product = ({props}) => {
-    console.log(props);
+const Product = (props) => {
+    const {products} = props;
     return (
         <>
             {
@@ -45,7 +17,7 @@ const Product = ({props}) => {
 const mapStateToProps = state => {
     return {
         cart: state.cart,
-        product: state.products
+        products: state.products
     }
 }
 

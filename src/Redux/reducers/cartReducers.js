@@ -1,7 +1,34 @@
 const { ADD_TO_CART, REMOVE_FROM_CART } = require("../actions/cartActions");
 
 const initialState = {
-    cart: []
+    cart: [],
+    products: [
+        {
+            name: 'Apple Macbook',
+            price: 1200,
+            id: 1
+        },
+        {
+            name: 'Asus Laptop',
+            price: 890,
+            id: 2
+        },
+        {
+            name: 'Hp Brand new laptop',
+            price: 1799,
+            id: 3
+        },
+        {
+            name: 'Tosiba Newbook',
+            price: 295,
+            id: 4
+        },
+        {
+            name: 'Dell inspiration',
+            price: 699,
+            id: 5
+        }
+    ],
 }
 
 const cartReducers = (state = initialState, action) =>{
