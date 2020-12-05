@@ -1,4 +1,4 @@
-const { ADD_TO_CART } = require("../actions/cartActions");
+const { ADD_TO_CART, REMOVE_FROM_CART } = require("../actions/cartActions");
 
 const initialState = {
     cart: []
@@ -15,7 +15,13 @@ const cartReducers = (state = initialState, action) =>{
             return {
                 cart: newCart
             };
+        case REMOVE_FROM_CART:
+            const id = action.id;
+            const remaningCart = state.cart.filter(item => item !== id);
+            return{cart: remaningCart};
         default: 
             return state;
     }
 }
+
+export default cartReducers;
