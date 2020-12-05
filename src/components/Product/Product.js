@@ -20,7 +20,6 @@ const mapStateToProps = state => {
         products: state.products
     }
 }
-
 const mapDispatchToProps = {
     addToCart : addToCart
 }
