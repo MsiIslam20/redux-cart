@@ -1,10 +1,13 @@
 import React from 'react';
+import Cart from '../Cart/Cart';
+import Product from '../Product/Product';
 
 const Shop = () => {
     return (
-        <div>
-            <h1>This is shop component</h1>
-        </div>
+        <>
+            <Cart></Cart>
+            <Product></Product>
+        </>
     );
 };
 
