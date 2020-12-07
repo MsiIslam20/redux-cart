@@ -30,5 +30,4 @@ const mapDispatchToProps = {
     removeFromCart : removeFromCart
 }
 
-
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
