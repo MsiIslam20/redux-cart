@@ -40,6 +40,7 @@ const cartReducers = (state = initialState, action) =>{
             const newId = action.id;
             const newCart = [...state.cart, newId];
             return {
+                products: state.products,
                 cart: newCart
             };
         case REMOVE_FROM_CART:
