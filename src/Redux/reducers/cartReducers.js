@@ -49,7 +49,7 @@ const cartReducers = (state = initialState, action) =>{
             };
         case REMOVE_FROM_CART:
             const id = action.id;
-            const remaningCart = state.cart.filter(item => item !== id);
+            const remaningCart = state.cart.filter(item => item.cartId !== id);
             return{...state, cart: remaningCart};
         default: 
             return state;
