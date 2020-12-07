@@ -5,7 +5,6 @@ import SingleProduct from './SingleProduct';
 
 const Product = (props) => {
     const {products, addToCart} = props;
-    console.log(props);
     return (
         <>
             {
