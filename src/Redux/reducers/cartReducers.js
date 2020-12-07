@@ -34,6 +34,7 @@ const initialState = {
 const cartReducers = (state = initialState, action) =>{
     switch(action.type){
         case ADD_TO_CART:
+            console.log(action);
             // return {
             //     cart: [...state.cart, action.id]
             // }
