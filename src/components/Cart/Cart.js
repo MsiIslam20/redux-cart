@@ -10,8 +10,8 @@ const Cart = (props) => {
             <ul>
                 {
                     cart.map(item => 
-                    <li key={item}>{item}
-                        <button onClick={() => removeFromCart(item)}>remove</button>
+                    <li key={item.cartId}>{item.name}
+                        <button onClick={() => removeFromCart(item.cartId)}>remove</button>
                     </li>
                     )
                 }

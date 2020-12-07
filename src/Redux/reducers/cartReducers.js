@@ -34,12 +34,15 @@ const initialState = {
 const cartReducers = (state = initialState, action) =>{
     switch(action.type){
         case ADD_TO_CART:
-            console.log(action);
             // return {
             //     cart: [...state.cart, action.id]
             // }
-            const newId = action.id;
-            const newCart = [...state.cart, newId];
+            const newItem = {
+                productId: action.product.id, 
+                name: action.product.name, 
+                cartId: state.cart.length + 1
+            }
+            const newCart = [...state.cart, newItem];
             return {
                 ...state,
                 cart: newCart
